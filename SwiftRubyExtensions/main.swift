@@ -26,14 +26,14 @@ println("Appending another array : \(array)")
 
 //Ruby like each and reverse_each
 
-array.each() { (var value) in
+array.each() { value in
     
     print("a\(value), ")
 }
 
 println()
 
-array.reverse_each() { (var value) in
+array.reverse_each() { value in
     
     print("a\(value), ")
 }
@@ -46,23 +46,23 @@ println()
 }
 
 
-10.times() { (var i) in
+10.times() { i in
     println("\(i) * 5 = \(i*5)")
 }
 
-1.upto(10) { (var i) in
-    println("\(i) * 5 = \(i*5)")
-}
-
-println()
-
-15.downto(6) { (var i) in
+1.upto(10) { i in
     println("\(i) * 5 = \(i*5)")
 }
 
 println()
 
-["Spiders":8, "Humans":2, "Dogs":4].each() { (var type,var legs) in
+15.downto(6) { i in
+    println("\(i) * 5 = \(i*5)")
+}
+
+println()
+
+["Spiders":8, "Humans":2, "Dogs":4].each() { type,legs in
     println("\(type) has \(legs) legs.")
 }
 
