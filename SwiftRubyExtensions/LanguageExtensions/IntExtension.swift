@@ -35,7 +35,7 @@ extension Int {
     func downto (downto:Int, loop : (Int)->())
     {
         for t in downto...self {
-            loop(t)
+            loop(self - t + downto)
         }
     }
     

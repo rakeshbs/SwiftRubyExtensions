@@ -16,6 +16,7 @@ extension String {
             
             return self.bridgeToObjectiveC().substringWithRange(NSMakeRange(index, 1))
     }
+
     
     subscript(startIndex:Int,endIndex:Int) -> String {
         
@@ -25,6 +26,8 @@ extension String {
             
             return self.bridgeToObjectiveC().substringWithRange(NSMakeRange(startIndex, endIndex-startIndex+1))
     }
+    
+    //Get concatenation of characters at indices
     
     subscript(indices:Int[]) -> String {
         

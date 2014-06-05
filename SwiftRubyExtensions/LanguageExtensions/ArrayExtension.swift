@@ -32,8 +32,8 @@ extension  Array  {
     
     func reverse_each (loop: (element:T) ->()) {
         
-        (self.count-1...0).reverse_each() { (var index) in
-            loop(element:self[index])
+        (0..self.count).each() { (var index) in
+            loop(element:self[self.count-index - 1])
         }
     }
     

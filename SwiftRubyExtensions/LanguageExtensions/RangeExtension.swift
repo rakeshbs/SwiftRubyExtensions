@@ -19,9 +19,14 @@ extension Range {
         
     }
     
-    func reverse_each (loop: (value:T) ->()) {
+}
+
+
+extension ReverseRange {
+    
+    func each (loop: (value:T) ->()) {
         
-        for e in Range(start: self.endIndex,end: self.startIndex) {
+        for e in self {
             loop(value:e)
         }
         

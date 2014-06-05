@@ -10,3 +10,60 @@ import Foundation
 
 println("Hello, World!")
 
+// Appending to end of Array
+
+var array = [1,2,3]
+
+println(array)
+
+array << 4
+
+println("Appending single element : \(array)")
+
+array << [5,6,7]
+
+println("Appending another array : \(array)")
+
+//Ruby like each and reverse_each
+
+array.each() { (var value) in
+    
+    print("a\(value), ")
+}
+
+println()
+
+array.reverse_each() { (var value) in
+    
+    print("a\(value), ")
+}
+
+println()
+
+
+10.times() {
+     println("Test")
+}
+
+
+10.times() { (var i) in
+    println("\(i) * 5 = \(i*5)")
+}
+
+1.upto(10) { (var i) in
+    println("\(i) * 5 = \(i*5)")
+}
+
+println()
+
+15.downto(6) { (var i) in
+    println("\(i) * 5 = \(i*5)")
+}
+
+println()
+
+["Spiders":8, "Humans":2, "Dogs":4].each() { (var type,var legs) in
+    println("\(type) has \(legs) legs.")
+}
+
+

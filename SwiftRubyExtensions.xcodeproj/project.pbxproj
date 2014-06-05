@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		146FF7DE1940B4630025FDED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7DD1940B4630025FDED /* main.swift */; };
+		146FF7EB1940B49C0025FDED /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7E51940B49C0025FDED /* ArrayExtension.swift */; };
+		146FF7EC1940B49C0025FDED /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7E61940B49C0025FDED /* DictionaryExtension.swift */; };
+		146FF7ED1940B49C0025FDED /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7E71940B49C0025FDED /* IntExtension.swift */; };
+		146FF7EE1940B49C0025FDED /* LanguageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7E81940B49C0025FDED /* LanguageExtensions.swift */; };
+		146FF7EF1940B49C0025FDED /* RangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7E91940B49C0025FDED /* RangeExtension.swift */; };
+		146FF7F01940B49C0025FDED /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7EA1940B49C0025FDED /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,12 @@
 /* Begin PBXFileReference section */
 		146FF7DA1940B4630025FDED /* SwiftRubyExtensions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftRubyExtensions; sourceTree = BUILT_PRODUCTS_DIR; };
 		146FF7DD1940B4630025FDED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		146FF7E51940B49C0025FDED /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		146FF7E61940B49C0025FDED /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		146FF7E71940B49C0025FDED /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		146FF7E81940B49C0025FDED /* LanguageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageExtensions.swift; sourceTree = "<group>"; };
+		146FF7E91940B49C0025FDED /* RangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeExtension.swift; sourceTree = "<group>"; };
+		146FF7EA1940B49C0025FDED /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,23 @@
 		146FF7DC1940B4630025FDED /* SwiftRubyExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				146FF7E41940B49C0025FDED /* LanguageExtensions */,
 				146FF7DD1940B4630025FDED /* main.swift */,
 			);
 			path = SwiftRubyExtensions;
+			sourceTree = "<group>";
+		};
+		146FF7E41940B49C0025FDED /* LanguageExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				146FF7E51940B49C0025FDED /* ArrayExtension.swift */,
+				146FF7E61940B49C0025FDED /* DictionaryExtension.swift */,
+				146FF7E71940B49C0025FDED /* IntExtension.swift */,
+				146FF7E81940B49C0025FDED /* LanguageExtensions.swift */,
+				146FF7E91940B49C0025FDED /* RangeExtension.swift */,
+				146FF7EA1940B49C0025FDED /* StringExtension.swift */,
+			);
+			path = LanguageExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +144,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146FF7EE1940B49C0025FDED /* LanguageExtensions.swift in Sources */,
+				146FF7F01940B49C0025FDED /* StringExtension.swift in Sources */,
+				146FF7EC1940B49C0025FDED /* DictionaryExtension.swift in Sources */,
+				146FF7ED1940B49C0025FDED /* IntExtension.swift in Sources */,
+				146FF7EF1940B49C0025FDED /* RangeExtension.swift in Sources */,
 				146FF7DE1940B4630025FDED /* main.swift in Sources */,
+				146FF7EB1940B49C0025FDED /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
