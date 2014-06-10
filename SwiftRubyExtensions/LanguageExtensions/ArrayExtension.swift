@@ -8,8 +8,53 @@
 
 import Foundation
 
-
 extension  Array  {
+    
+    
+    
+    func take (n:Int) -> Array<T>?
+    {
+        
+        if n > self.count {
+            return nil
+        }
+        
+        var result:Array<T> = []
+        
+        for index in (0..n){
+            
+            result.append(self[index])
+        }
+        return result
+    }
+    
+    subscript (startIndex:Int,length:Int)  -> Array? {
+        
+        if (length == 0) {
+            return nil
+            }
+            
+            if (length > 0) {
+                
+                if (startIndex + length) > self.count {
+                    return nil
+                }
+                
+                var result:Array<T> = []
+                
+                for index in (startIndex..(startIndex+length)){
+                    
+                    result.append(self[index])
+                }
+                return result
+            }
+            else {
+                
+                return nil
+            }
+    }
+    
+    
     
     func inject <B> (startValue:B?, loop : ((accumulator:B?,element:T) -> B?)) -> (B?)
     {
@@ -29,6 +74,7 @@ extension  Array  {
         }
         
     }
+    
     
     func reverse_each (loop: (element:T) ->()) {
         

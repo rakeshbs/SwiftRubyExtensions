@@ -12,9 +12,15 @@ println("Hello, World!")
 
 // Appending to end of Array
 
-var array = [1,2,3]
+var array:Array<Int> = [1,2,3]
 
 println(array)
+
+var k = array[2,1]
+
+//var k = "ASDAs"
+
+println(k)
 
 array << 4
 
@@ -65,5 +71,7 @@ println()
 ["Spiders":8, "Humans":2, "Dogs":4].each { type,legs in
     println("\(type) has \(legs) legs.")
 }
+
+
 
 

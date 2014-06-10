@@ -23,8 +23,17 @@ import Foundation
     }
 }
 
-
-
+class ArrayRange
+{
+    var startIndex:Int
+    var endIndex:Int
+    
+    init (startIndex:Int,endIndex:Int)
+    {
+        self.startIndex = startIndex
+        self.endIndex = endIndex
+    }
+}
 
 
 

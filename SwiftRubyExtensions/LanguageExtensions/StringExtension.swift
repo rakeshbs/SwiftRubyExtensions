@@ -16,6 +16,7 @@ extension String {
             
             return self.bridgeToObjectiveC().substringWithRange(NSMakeRange(index, 1))
     }
+    
 
     
     subscript(startIndex:Int,endIndex:Int) -> String {
