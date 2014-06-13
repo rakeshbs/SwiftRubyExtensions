@@ -8,19 +8,12 @@
 
 import Foundation
 
-println("Hello, World!")
 
 // Appending to end of Array
 
-var array:Array<Int> = [1,2,3]
-
-println(array)
+var array = [1,2,3]
 
 var k = array[2,1]
-
-//var k = "ASDAs"
-
-println(k)
 
 array << 4
 

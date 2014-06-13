@@ -10,7 +10,19 @@ import Foundation
 
 extension  Array  {
     
-    
+    var length : Int
+    {
+        get {
+            return self.count
+        }
+    }
+
+    var size : Int
+    {
+    get {
+        return self.count
+    }
+    }
     
     func take (n:Int) -> Array<T>?
     {
@@ -82,5 +94,7 @@ extension  Array  {
             loop(element:self[self.count-index - 1])
         }
     }
+    
+    
     
 }
