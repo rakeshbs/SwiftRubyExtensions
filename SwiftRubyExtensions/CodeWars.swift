@@ -21,7 +21,7 @@ class User
 {
     var rankIndex = 0
     var progress = 0
-    var progression:Array<Int> = Array(-8..8) - [0]
+    var progression = Array(-8..8) - [0]
     
     var rank : Int
     {
