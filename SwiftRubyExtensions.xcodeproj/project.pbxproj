@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		141821741949B3A900454BD6 /* CodeWars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141821731949B3A900454BD6 /* CodeWars.swift */; };
 		146FF7DE1940B4630025FDED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7DD1940B4630025FDED /* main.swift */; };
 		146FF7EB1940B49C0025FDED /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7E51940B49C0025FDED /* ArrayExtension.swift */; };
 		146FF7EC1940B49C0025FDED /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FF7E61940B49C0025FDED /* DictionaryExtension.swift */; };
@@ -30,7 +29,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		141821731949B3A900454BD6 /* CodeWars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeWars.swift; sourceTree = "<group>"; };
 		146FF7DA1940B4630025FDED /* SwiftRubyExtensions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftRubyExtensions; sourceTree = BUILT_PRODUCTS_DIR; };
 		146FF7DD1940B4630025FDED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		146FF7E51940B49C0025FDED /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 			children = (
 				146FF7E41940B49C0025FDED /* LanguageExtensions */,
 				146FF7DD1940B4630025FDED /* main.swift */,
-				141821731949B3A900454BD6 /* CodeWars.swift */,
 			);
 			path = SwiftRubyExtensions;
 			sourceTree = "<group>";
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				146FF7EE1940B49C0025FDED /* LanguageExtensions.swift in Sources */,
-				141821741949B3A900454BD6 /* CodeWars.swift in Sources */,
 				146FF7F01940B49C0025FDED /* StringExtension.swift in Sources */,
 				146FF7EC1940B49C0025FDED /* DictionaryExtension.swift in Sources */,
 				146FF7ED1940B49C0025FDED /* IntExtension.swift in Sources */,

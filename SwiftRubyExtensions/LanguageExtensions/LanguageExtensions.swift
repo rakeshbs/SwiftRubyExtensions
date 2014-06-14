@@ -8,17 +8,22 @@
 
 import Foundation
 
-/*
-operator infix <| {}
-
-@infix func <| (closure1: ()-> (), closure2: () -> Bool)
+func memoize <T:Hashable, U> (body:(T -> U,T) -> U) -> (T -> U)
 {
-    if closure2() {
-        closure1()
+    var memo = Dictionary<T,U> ()
+    var result:((T)->U)!
+    result = { x in
+        
+        if let v = memo[x] { return v }
+        let v = body(result, x)
+        memo[x] = v
+        return v
     }
+    return result
 }
-*/
-@infix func - <T:Comparable> (a:Array<T>, b:Array<T>) -> Array<T>
+
+
+@infix func - <T:Equatable> (a:Array<T>, b:Array<T>) -> Array<T>
 {
     var result = a
     result.unshare()

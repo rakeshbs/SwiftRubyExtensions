@@ -24,6 +24,28 @@ extension  Array  {
     }
     }
     
+    var first : T?
+    {
+        get {
+            
+            if (self.count > 0) { return self[0] }
+            return nil
+        }
+    }
+    
+    var last : T?
+    {
+    get {
+        if (self.count > 0) { return self[count-1] }
+        return nil
+    }
+    }
+    
+    func empty () -> Bool
+    {
+        return (self.count == 0) ? true : false
+    }
+    
     func take (n:Int) -> Array<T>?
     {
         
@@ -66,6 +88,10 @@ extension  Array  {
             }
     }
     
+    func collect<B> (loop : (element:T) -> B) -> Array<B>
+    {
+        return self.map(loop)
+    }
     
     
     func inject <B> (startValue:B?, loop : ((accumulator:B?,element:T) -> B?)) -> (B?)
@@ -95,6 +121,25 @@ extension  Array  {
         }
     }
     
+    mutating func pop () -> T {
+        
+        return self.removeLast()
+    }
     
+    mutating func push (newElement: T) {
+        
+        return self.append(newElement)
+    }
+    
+    
+    mutating func shift () -> T {
+        
+        return self.removeAtIndex(0)
+    }
+    
+    mutating func unshift (newElement: T) {
+        
+        self.insert(newElement, atIndex: 0)
+    }
     
 }

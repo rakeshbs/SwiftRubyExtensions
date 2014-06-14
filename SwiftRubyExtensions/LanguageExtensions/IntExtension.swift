@@ -11,6 +11,16 @@ import Foundation
 
 extension Int {
     
+    func isEven () -> Bool
+    {
+        return (self % 2 == 0)
+    }
+
+    func isOdd () -> Bool
+    {
+        return (self % 2 != 0)
+    }
+    
     func times (loop : ()->())
     {
         for t in 1...self {

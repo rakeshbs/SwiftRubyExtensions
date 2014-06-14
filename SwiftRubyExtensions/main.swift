@@ -8,8 +8,16 @@
 
 import Foundation
 
-
 // Appending to end of Array
+
+let memoized = memoize { memoized,x in
+    x == 0 ? 1 : memoized(x-1)
+}
+
+
+0.upto(10) { i in
+    println (memoized(i))
+}
 
 var array = [1,2,3]
 
@@ -26,14 +34,14 @@ println("Appending another array : \(array)")
 //Ruby like each and reverse_each
 
 array.each { value in
-    
+
     print("a\(value), ")
 }
 
 println()
 
 array.reverse_each { value in
-    
+
     print("a\(value), ")
 }
 
