@@ -10,22 +10,19 @@ import Foundation
 
 extension  Array  {
     
-    var length : Int
-    {
+    var length : Int {
         get {
             return self.count
         }
     }
-
-    var size : Int
-    {
-    get {
-        return self.count
-    }
+    
+    var size : Int {
+        get {
+            return self.count
+        }
     }
     
-    var first : T?
-    {
+    var first : Element? {
         get {
             
             if (self.count > 0) { return self[0] }
@@ -33,29 +30,26 @@ extension  Array  {
         }
     }
     
-    var last : T?
-    {
-    get {
-        if (self.count > 0) { return self[count-1] }
-        return nil
-    }
+    var last : Element? {
+        get {
+            if (self.count > 0) { return self[count-1] }
+            return nil
+        }
     }
     
-    func empty () -> Bool
-    {
+    func empty () -> Bool {
         return (self.count == 0) ? true : false
     }
     
-    func take (n:Int) -> Array<T>?
-    {
+    func take (n:Int) -> Array<Element>?  {
         
         if n > self.count {
             return nil
         }
         
-        var result:Array<T> = []
+        var result:Array<Element> = []
         
-        for index in (0..n){
+        for index in (0..<n){
             
             result.append(self[index])
         }
@@ -66,35 +60,35 @@ extension  Array  {
         
         if (length == 0) {
             return nil
-            }
+        }
+        
+        if (length > 0) {
             
-            if (length > 0) {
-                
-                if (startIndex + length) > self.count {
-                    return nil
-                }
-                
-                var result:Array<T> = []
-                
-                for index in (startIndex..(startIndex+length)){
-                    
-                    result.append(self[index])
-                }
-                return result
-            }
-            else {
-                
+            if (startIndex + length) > self.count {
                 return nil
             }
+            
+            var result:Array<Element> = []
+            
+            for index in (startIndex..<(startIndex+length)){
+                
+                result.append(self[index])
+            }
+            return result
+        }
+        else {
+            
+            return nil
+        }
     }
     
-    func collect<B> (loop : (element:T) -> B) -> Array<B>
+    func collect<B> (loop : (element:Element) -> B) -> Array<B>
     {
         return self.map(loop)
     }
     
     
-    func inject <B> (startValue:B?, loop : ((accumulator:B?,element:T) -> B?)) -> (B?)
+    func inject <B> (startValue:B?, loop : ((accumulator:B?,element:Element) -> B?)) -> (B?)
     {
         var result:B? = startValue
         for e in self
@@ -105,7 +99,7 @@ extension  Array  {
         return result
     }
     
-    func each (loop: (element:T) ->()) {
+    func each (loop: (element:Element) ->()) {
         
         for e in self {
             loop(element:e)
@@ -113,31 +107,48 @@ extension  Array  {
         
     }
     
-    
-    func reverse_each (loop: (element:T) ->()) {
+    func eachWithIndex (loop: (index : Int, element:Element) ->()) {
         
-        (0..self.count).each() { index in
+        var counter : Int = 0
+        for e in self {
+            loop(index: counter, element:e)
+            counter += 1
+        }
+        
+    }
+    
+    
+    func reverseEach (loop: (element:Element) ->()) {
+        
+        (0..<self.count).each() { index in
             loop(element:self[self.count-index - 1])
         }
     }
     
-    mutating func pop () -> T {
+    func reverseEachWithIndex (loop: (index : Int, element:Element) ->()) {
+        
+        (0..<self.count).each() { index in
+            loop(index: self.count - index - 1, element:self[self.count-index - 1])
+        }
+    }
+    
+    mutating func pop () -> Element {
         
         return self.removeLast()
     }
     
-    mutating func push (newElement: T) {
+    mutating func push (newElement: Element) {
         
         return self.append(newElement)
     }
     
     
-    mutating func shift () -> T {
+    mutating func shift () -> Element {
         
         return self.removeAtIndex(0)
     }
     
-    mutating func unshift (newElement: T) {
+    mutating func unshift (newElement: Element) {
         
         self.insert(newElement, atIndex: 0)
     }

@@ -23,7 +23,7 @@ extension Int {
     
     func times (loop : ()->())
     {
-        for t in 1...self {
+        for _ in 1...self {
             loop()
         }
     }

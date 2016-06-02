@@ -11,20 +11,7 @@ import Foundation
 
 extension Range {
     
-    func each (loop: (value:T) ->()) {
-        
-        for e in self {
-            loop(value:e)
-        }
-        
-    }
-    
-}
-
-
-extension ReverseRange {
-    
-    func each (loop: (value:T) ->()) {
+    func each (loop: (value:Element) ->()) {
         
         for e in self {
             loop(value:e)

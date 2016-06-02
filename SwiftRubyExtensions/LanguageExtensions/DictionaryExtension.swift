@@ -10,7 +10,7 @@ import Foundation
 
 extension  Dictionary  {
     
-    func each (loop: (key:KeyType,value:ValueType) ->()) {
+    func each (loop: (key:Key,value:Value) ->()) {
         
         for (k,v) in self {
             loop(key:k,value:v)
